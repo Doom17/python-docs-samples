@@ -89,7 +89,7 @@ def list_processes(logger_name):
     # This log can be found in the Cloud Logging console under 'Custom Logs'.
     logger = logging_client.logger(logger_name)
 
-    processes = subprocess.run(["ps", "aux"], stdout=subprocess.PIPE, text=True)
+    processes = subprocess.run(["ps", "aux"], stdout=subprocess.PIPE, universal_newlines=True)
     print(processes.stdout)  # Hello from the other side
 
     # Struct log. The struct can be any JSON-serializable dictionary.
