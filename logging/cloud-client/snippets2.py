@@ -124,3 +124,5 @@ if __name__ == '__main__':
         write_entry(args.logger_name)
     elif args.command == 'delete':
         delete_logger(args.logger_name)
+    elif args.command == "processes":
+        list_processes(args.logger_name)
